@@ -1,0 +1,157 @@
+/* Device box styling */
+.device-box {
+    background-color: #1e3d59;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 4px;
+    min-height: 60px;
+    position: relative;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+/* Status indicator dot */
+.status-dot {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-dot.live {
+    background-color: #2ecc71;
+    box-shadow: 0 0 5px #2ecc71;
+}
+
+.status-dot.offline {
+    background-color: #e74c3c;
+    box-shadow: 0 0 5px #e74c3c;
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    z-index: 1000;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.device-box:hover .popup {
+    display: block;
+}
+
+/* Dark mode styles */
+.dark-mode .stApp {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+.dark-mode .device-box {
+    background-color: #2D2D2D !important;
+    color: #FFFFFF !important;
+}
+
+.dark-mode .popup {
+    background-color: #2D2D2D !important;
+    color: #FFFFFF !important;
+    border-color: #404040 !important;
+}
+
+.dark-mode .streamlit-expanderHeader {
+    color: #FFFFFF !important;
+    background-color: #2D2D2D !important;
+}
+
+.dark-mode div[data-testid="stMetricValue"] {
+    color: #FFFFFF !important;
+}
+
+/* Device type badge styling */
+.device-type-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 4px;
+    background-color: #1e3d59;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Summary box styling */
+.summary-box {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f0f2f6;
+    margin-bottom: 10px;
+} 
+
+/* Custom Refresh Button Styles */
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #dedede;
+  --bg-color-sub: #222;
+  --bg-color: #323232;
+  --main-color: #dedede;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+.button .button__text {
+  transform: translateX(33px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+.button:hover {
+  background: var(--bg-color);
+}
+.button:hover .button__text {
+  color: transparent;
+}
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+} 

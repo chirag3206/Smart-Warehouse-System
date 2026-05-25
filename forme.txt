@@ -1,0 +1,36 @@
+===== Inventory Management System - How to Run =====
+
+Quick Start:
+1. Open Command Prompt
+2. Run this command:
+   C:/Users/mehul/miniconda3/Scripts/activate streamlit_app && streamlit run app.py
+
+If the above doesn't work, follow these troubleshooting steps:
+
+1. Check Available Conda Environments:
+   - Open Command Prompt
+   - Run: C:/Users/mehul/miniconda3/Scripts/activate
+   - Run: conda env list
+   - Look for 'streamlit_app' in the list
+
+2. If Streamlit Not Found:
+   a) Activate the correct environment:
+      C:/Users/mehul/miniconda3/Scripts/activate streamlit_app
+   
+   b) Install required packages:
+      pip install -r requirements.txt
+
+3. Common Issues:
+   - If Streamlit asks which environment to use, select 'streamlit_app'
+   - Make sure to check "Remember my selection" when prompted
+   - Always run Streamlit from the conda environment, not system Python
+
+4. File Structure:
+   - app.py: Main application file
+   - requirements.txt: Required Python packages
+   - Inventorydata.xlsx: Data file
+
+Note: Your Streamlit app is installed in the 'streamlit_app' conda environment. Always use this environment to run the application. 
+
+
+C:/Users/mehul/miniconda3/Scripts/activate streamlit_app && streamlit run app.py
